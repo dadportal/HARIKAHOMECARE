@@ -1,42 +1,57 @@
 # HARIKAHOMECARE
 
-**Harika Care & Services** — Professional Care. Trusted People. Better Lives.
+**Harika Home Care Services** — Professional Care. Trusted People. Better Lives.
 
-## Full functional app (not a demo shell)
+**Founder & CEO:** Praveen K  
+**Phone:** +91 98765 43210  
+**Email:** praveen@harikaservices.in  
+**Web:** www.harikaservices.in  
+**HQ:** Hyderabad, Telangana · Serving AP & Telangana
 
-Open `index.html` (or deploy to Vercel). All data persists in browser storage and is fully editable via Admin CMS.
+## Full platform (source of truth)
 
-### Roles (real login)
-| Role | Phone | OTP |
-|------|-------|-----|
-| Super Admin | 9999999999 | 123456 |
-| Admin | 8888888888 | 123456 |
-| Client | 9876543210 | 123456 |
-| Worker (verified) | 9123456780 | 123456 |
-| Worker (pending) | 9123456783 | 123456 |
+The complete functional app lives in the project folder:
 
-### What works
-- **100% width premium banner slider** (CMS controlled)
-- **Services grid** from CMS (add/edit/delete/activate)
-- **Trust stats** from CMS
-- **OTP auth** with role picker (Client / Worker / Admin / Super Admin)
-- **Client dashboard** — bookings, profile, new booking
-- **Worker dashboard** — jobs, accept, start/complete, earnings, document submit
-- **Admin / Super Admin** — users, worker verify (approve/reject), assign workers to bookings, Services CMS, Banners CMS, Stats CMS
-- **6-step booking** saved to real store
-- **EN + Telugu** on booking & assistant
-- **Chatbot** trained on services
-
-### Deploy Vercel
-1. vercel.com/new → import `dadportal/HARIKAHOMECARE`
-2. Deploy (static)
-
-### Local
-```bash
-python3 -m http.server 8080
-# open http://localhost:8080
+```
+harika-platform/live/index.html   ← full app (roles, CMS, booking, admin)
+harika-platform/live/logo.png
+harika-platform/live/logo-sm.png
 ```
 
-Replace `index.html` with the latest from project `live/index.html` if the repo copy is older.
+### Push full app to this repo (from your machine)
 
-© Harika Care & Services
+```bash
+cd path/to/harika-platform/live
+# Copy into a clone of this repo
+cp index.html logo-sm.png logo.png /path/to/HARIKAHOMECARE/
+cd /path/to/HARIKAHOMECARE
+git add index.html logo-sm.png logo.png
+git commit -m "Full Harika platform: logo, CMS, roles, booking"
+git push origin main
+```
+
+Then redeploy on Vercel.
+
+### Login (OTP = 123456)
+
+| Role | Phone |
+|------|-------|
+| Super Admin | 9999999999 |
+| Admin | 8888888888 |
+| Client | 9876543210 |
+| Worker | 9123456780 |
+
+### Features
+- 100% width premium banner slider (CMS)
+- Services CMS (EN + Telugu)
+- OTP auth + RBAC (Client / Worker / Admin / Super Admin)
+- Client dashboard + 6-step booking
+- Worker jobs / verification workflow
+- Admin: verify workers, assign bookings, banners, stats, services
+- Official Harika logo (not redesigned)
+
+### Vercel
+1. https://vercel.com/new → import `dadportal/HARIKAHOMECARE`
+2. Deploy (static)
+
+© 2026 Harika Home Care Services · People Care Everyday
