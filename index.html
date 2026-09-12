@@ -1,1 +1,10 @@
-PLACEHOLDER
+<!DOCTYPE html><html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Harika Home Care Services</title></head><body>
+<script>
+async function load(){
+  const parts = await Promise.all([0,1,2].map(i => fetch('part'+i+'.txt').then(r=>r.text())));
+  document.open(); document.write(parts.join('')); document.close();
+}
+load();
+</script>
+<p style="font-family:Inter,sans-serif;padding:2rem;color:#063B3B">Loading Harika Home Care Services…</p>
+</body></html>
