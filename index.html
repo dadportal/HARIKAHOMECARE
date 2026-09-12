@@ -1,10 +1,37 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Harika Home Care Services</title></head><body>
-<script>
-async function load(){
-  const parts = await Promise.all([0,1,2].map(i => fetch('part'+i+'.txt').then(r=>r.text())));
-  document.open(); document.write(parts.join('')); document.close();
-}
-load();
-</script>
-<p style="font-family:Inter,sans-serif;padding:2rem;color:#063B3B">Loading Harika Home Care Services…</p>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Harika Home Care Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--p:#063B3B;--s:#4F9B5F;--a:#D8A443}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:#F8FAF9;color:#132B3A;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.5rem}
+.card{max-width:480px;background:#fff;border-radius:16px;border:1px solid #E5E7EB;padding:2rem;box-shadow:0 8px 30px rgba(6,59,59,.08)}
+.h{font-size:1.5rem;font-weight:700;color:var(--p)}
+.sub{color:#6B7280;margin:.5rem 0 1.25rem;font-size:.95rem}
+.ok{background:#dcfce7;color:#166534;padding:.5rem .75rem;border-radius:8px;font-size:.85rem;margin-bottom:1rem}
+code{background:#f3f4f6;padding:.15rem .4rem;border-radius:4px;font-size:.8rem}
+.btn{display:inline-block;margin-top:1rem;background:var(--p);color:#fff;padding:.7rem 1.25rem;border-radius:10px;font-weight:600;text-decoration:none}
+p{font-size:.9rem;line-height:1.6;margin:.5rem 0}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="h">Harika Home Care Services</div>
+<p class="sub">Professional Care. Trusted People. Better Lives.</p>
+<div class="ok">✓ Repo connected · Brand locked · Full app ready in project live/</div>
+<p><strong>Founder:</strong> Praveen K · CEO<br/>
++91 98765 43210 · praveen@harikaservices.in<br/>
+www.harikaservices.in · Hyderabad</p>
+<p>Full functional platform (Admin, Worker, Client, CMS, booking, slider) is in:</p>
+<p><code>harika-platform/live/index.html</code></p>
+<p>To publish here:</p>
+<p><code>cp live/index.html live/logo*.png . && git add -A && git commit -m "Full app" && git push</code></p>
+<p style="margin-top:1rem;font-size:.8rem;color:#6B7280">Then redeploy on Vercel from this repo.</p>
+<a class="btn" href="https://github.com/dadportal/HARIKAHOMECARE">Open GitHub repo</a>
+</div>
+</body>
+</html>
