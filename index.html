@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>Harika Care & Services | Professional Care. Trusted People.</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--p:#063B3B;--s:#4F9B5F;--a:#D8A443;--bg:#F8FAF9;--t:#132B3A;--m:#6B7280;--b:#E5E7EB}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.5}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:none}input,select,textarea{font-family:inherit}
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--b);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px}.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.brand-name{font-weight:600;color:var(--p);font-size:1.1rem}.brand-sub{font-size:10px;letter-spacing:.06em;color:var(--m)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;font-weight:600;font-size:.9rem;padding:.65rem 1.25rem}
+.btn-p{background:var(--p);color:#fff}.btn-o{border:2px solid var(--p);color:var(--p);background:transparent}.btn-s{background:var(--s);color:#fff}.btn-lg{padding:.9rem 1.75rem;font-size:1rem}
+.hero{max-width:1100px;margin:0 auto;padding:3rem 1rem;display:grid;gap:2rem;align-items:center}
+@media(min-width:768px){.hero{grid-template-columns:1fr 1fr;padding:4rem 1rem}}
+.eyebrow{color:var(--s);font-weight:500;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.75rem}
+.hero h1{font-size:clamp(2rem,5vw,3.25rem);color:var(--p);line-height:1.15;font-weight:700}.hero h1 span{color:var(--s)}
+.hero p{margin-top:1.25rem;color:rgba(19,43,58,.8);font-size:1.1rem;max-width:28rem}
+.hero-ctas{margin-top:1.75rem;display:flex;flex-wrap:wrap;gap:.75rem}
+.hero-v{aspect-ratio:1;max-width:360px;margin:0 auto;border-radius:1.5rem;background:linear-gradient(135deg,rgba(6,59,59,.08),rgba(79,155,95,.12));display:flex;align-items:center;justify-content:center;padding:2rem}
+.hero-v img{width:70%;max-width:240px;border-radius:50%}
+.stats{background:var(--p);color:#fff;padding:2.5rem 1rem}
+.stats-i{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;text-align:center}
+@media(min-width:768px){.stats-i{grid-template-columns:repeat(4,1fr)}}
+.stat-n{font-size:1.85rem;font-weight:700;color:var(--a)}.stat-l{font-size:.85rem;opacity:.85;margin-top:.25rem}
+.sec{max-width:1100px;margin:0 auto;padding:3.5rem 1rem}
+.sec-t{text-align:center;font-size:1.85rem;font-weight:700;color:var(--p)}.sec-s{text-align:center;color:var(--m);margin:.5rem 0 2rem}
+.g4{display:grid;grid-template-columns:repeat(2,1fr);gap:.85rem}
+@media(min-width:640px){.g4{grid-template-columns:repeat(3,1fr)}}@media(min-width:900px){.g4{grid-template-columns:repeat(4,1fr)}}
+.sc{background:#fff;border:1px solid var(--b);border-radius:1rem;padding:1.25rem;text-align:center;cursor:pointer}
+.sc:hover{border-color:rgba(79,155,95,.5);box-shadow:0 4px 16px rgba(6,59,59,.08)}
+.sc-i{font-size:2rem;margin-bottom:.5rem}.sc-n{font-weight:600;color:var(--p);font-size:.95rem}.sc-t{font-size:.75rem;color:var(--m);margin-top:.15rem}
+.steps{display:grid;gap:1.5rem}@media(min-width:768px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{text-align:center}.sn{width:3rem;height:3rem;margin:0 auto;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.step h3{margin-top:1rem;font-weight:600;color:var(--p)}.step p{font-size:.875rem;color:var(--m);margin-top:.35rem}
+.wg{display:grid;gap:1rem}@media(min-width:640px){.wg{grid-template-columns:repeat(2,1fr)}}@media(min-width:900px){.wg{grid-template-columns:repeat(3,1fr)}}
+.wc{background:#fff;border:1px solid var(--b);border-radius:1rem;padding:1.35rem}
+.wc-c{width:2.25rem;height:2.25rem;border-radius:.65rem;background:rgba(79,155,95,.15);color:var(--s);display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:.75rem}
+.cov{background:var(--p);color:#fff;padding:3rem 1rem;text-align:center}.cov h2{font-size:1.5rem;font-weight:700}.cov p{margin-top:.75rem;opacity:.85;max-width:36rem;margin-left:auto;margin-right:auto}
+.cta{text-align:center;padding:3.5rem 1rem}.cta h2{font-size:1.75rem;font-weight:700;color:var(--p)}.cta p{color:var(--m);margin-top:.75rem}
+.cta-b{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+footer{background:var(--t);color:rgba(255,255,255,.85);padding:2.5rem 1rem}
+.fi{max-width:1100px;margin:0 auto;display:grid;gap:2rem}@media(min-width:768px){.fi{grid-template-columns:2fr 1fr 1fr 1fr}}
+footer h4{font-weight:600;margin-bottom:.75rem;color:#fff}footer ul{list-style:none;font-size:.875rem;opacity:.75}footer li{margin-bottom:.4rem}
+.fc{max-width:1100px;margin:2rem auto 0;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem;opacity:.5}
+.view{display:none;min-height:100vh}.view.active{display:block}
+.pw{max-width:440px;margin:0 auto;padding:2rem 1rem 3rem}
+.panel{background:#fff;border-radius:1.25rem;border:1px solid var(--b);box-shadow:0 4px 24px rgba(6,59,59,.06);padding:2rem}
+.panel h1{font-size:1.5rem;font-weight:700;color:var(--p);text-align:center}
+.sub{text-align:center;color:var(--m);font-size:.9rem;margin:.35rem 0 1.5rem}
+.lt{display:flex;gap:.35rem;justify-content:center;margin-bottom:1.25rem}
+.lb{padding:.35rem .85rem;border-radius:999px;font-size:.8rem;border:1px solid var(--b);background:#fff}.lb.active{background:var(--p);color:#fff;border-color:var(--p)}
+label{display:block;font-size:.85rem;font-weight:600;margin-bottom:.4rem}
+.field{width:100%;height:48px;border:2px solid var(--b);border-radius:12px;padding:0 .9rem;font-size:1rem;outline:none;margin-bottom:1rem}
+.field:focus{border-color:var(--s)}textarea.field{height:auto;padding:.75rem .9rem;resize:vertical}
+.pr{display:flex;align-items:center;border:2px solid var(--b);border-radius:12px;overflow:hidden;margin-bottom:1rem}.pr:focus-within{border-color:var(--s)}
+.px{padding:0 .75rem;font-weight:600;color:var(--p)}.pr input{border:none;flex:1;height:48px;outline:none;font-size:1rem}
+.err{background:#fef2f2;color:#dc2626;font-size:.85rem;padding:.5rem .75rem;border-radius:8px;margin-bottom:1rem}
+.fb{width:100%;height:48px;border-radius:12px;font-weight:600;font-size:1rem}
+.prog{height:4px;background:#e5e7eb}.prog-b{height:100%;background:var(--s);transition:width .3s}
+.sl{font-size:.8rem;color:var(--m);text-align:right;padding:.5rem 1rem}
+.so{width:100%;text-align:left;padding:1rem;border:2px solid var(--b);border-radius:12px;background:#fff;margin-bottom:.5rem}
+.so.sel{border-color:var(--s);background:rgba(79,155,95,.06)}.so .rate{color:var(--s);font-size:.85rem;margin-top:.25rem}
+.cr{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.chip{padding:.55rem 1rem;border-radius:12px;border:2px solid var(--b);background:#fff;font-weight:500;font-size:.9rem}
+.chip.sel{border-color:var(--s);background:rgba(79,155,95,.1);color:var(--s)}
+.nr{display:flex;gap:.75rem;margin-top:1.5rem}.nr .btn{flex:1;height:48px}
+.rr{display:flex;justify-content:space-between;padding:.4rem 0;font-size:.9rem}.rr span:first-child{color:var(--m)}
+.sb{text-align:center;padding:2rem 0}
+.si{width:72px;height:72px;margin:0 auto;border-radius:50%;background:rgba(79,155,95,.15);color:var(--s);display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:700}
+.cf{position:fixed;bottom:1.5rem;right:1.5rem;z-index:100;width:56px;height:56px;border-radius:50%;background:var(--p);color:#fff;font-size:1.5rem;box-shadow:0 4px 20px rgba(6,59,59,.3);display:flex;align-items:center;justify-content:center}
+.cp{position:fixed;bottom:5.5rem;right:1rem;z-index:100;width:min(100vw - 2rem,380px);height:460px;background:#fff;border-radius:1.25rem;border:1px solid var(--b);box-shadow:0 12px 40px rgba(0,0,0,.15);display:none;flex-direction:column;overflow:hidden}
+.cp.open{display:flex}
+.ch{background:var(--p);color:#fff;padding:.85rem 1rem;display:flex;justify-content:space-between;align-items:center}
+.cm{flex:1;overflow-y:auto;padding:.75rem;background:var(--bg)}
+.msg{max-width:85%;padding:.55rem .85rem;border-radius:1rem;font-size:.875rem;margin-bottom:.5rem;line-height:1.4}
+.msg.bot{background:#fff;border:1px solid var(--b);border-bottom-left-radius:4px}
+.msg.user{background:var(--p);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.ci{display:flex;gap:.4rem;padding:.65rem;border-top:1px solid var(--b)}
+.ci input{flex:1;height:40px;border-radius:999px;border:1px solid var(--b);padding:0 1rem;font-size:.875rem;outline:none}
+.ci button{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.mb{background:#f3f4f6}.mb.listening{background:#ef4444;color:#fff}
+.sbn{background:var(--s);color:#fff;font-weight:700}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<div id="view-home" class="view active">
+<header class="header">
+<a href="#" class="brand" onclick="show('home')"><img src="logo.png" alt="Harika" onerror="this.style.display='none'"/><div><div class="brand-name">Harika</div><div class="brand-sub">CARE & SERVICES</div></div></a>
+<div style="display:flex;gap:.5rem;align-items:center">
+<button class="btn" style="background:transparent;color:var(--p);font-size:.85rem" onclick="show('login')">Login</button>
+<button class="btn btn-p" onclick="show('book')">Find a Service</button>
+</div>
+</header>
+<section class="hero">
+<div>
+<p class="eyebrow">People Care Everyday</p>
+<h1>Professional Care.<br/>Trusted People.<br/><span>Better Lives.</span></h1>
+<p>Find trained and reliable care professionals for your home and family across Andhra Pradesh & Telangana.</p>
+<div class="hero-ctas">
+<button class="btn btn-p btn-lg" onclick="show('book')">Find a Service</button>
+<button class="btn btn-o btn-lg" onclick="show('login')">Become a Provider</button>
+</div>
+</div>
+<div class="hero-v"><img src="logo.png" alt="Harika Care Logo" onerror="this.outerHTML='<div style=font-size:4rem>🏠</div>'"/></div>
+</section>
+<section class="stats"><div class="stats-i">
+<div><div class="stat-n">1,247</div><div class="stat-l">Verified Professionals</div></div>
+<div><div class="stat-n">5,832</div><div class="stat-l">Happy Families</div></div>
+<div><div class="stat-n">12+</div><div class="stat-l">Cities</div></div>
+<div><div class="stat-n">4.8★</div><div class="stat-l">Average Rating</div></div>
+</div></section>
+<section class="sec">
+<h2 class="sec-t">Our Services</h2>
+<p class="sec-s">From elderly care to home helpers — professional support when you need it.</p>
+<div class="g4" id="svc-grid"></div>
+</section>
+<section class="sec" style="background:#fff">
+<h2 class="sec-t">How It Works</h2>
+<p class="sec-s">Simple steps to get trusted care</p>
+<div class="steps">
+<div class="step"><div class="sn">1</div><h3>Choose a Service</h3><p>Select the care or help you need</p></div>
+<div class="step"><div class="sn">2</div><h3>Share Requirements</h3><p>Location, schedule, gender preference</p></div>
+<div class="step"><div class="sn">3</div><h3>Get Matched</h3><p>We match verified professionals near you</p></div>
+<div class="step"><div class="sn">4</div><h3>Confirm & Relax</h3><p>Book, pay securely and track service</p></div>
+</div>
+</section>
+<section class="sec">
+<h2 class="sec-t">Why Choose Harika</h2>
+<div class="wg" style="margin-top:2rem">
+<div class="wc"><div class="wc-c">✓</div><h3 style="font-weight:600;color:var(--p)">Verified Professionals</h3><p style="font-size:.9rem;color:var(--m);margin-top:.35rem">Every worker undergoes document and background verification</p></div>
+<div class="wc"><div class="wc-c">✓</div><h3 style="font-weight:600;color:var(--p)">Trained & Reliable</h3><p style="font-size:.9rem;color:var(--m);margin-top:.35rem">Experience-checked caregivers who understand family needs</p></div>
+<div class="wc"><div class="wc-c">✓</div><h3 style="font-weight:600;color:var(--p)">Safe & Transparent</h3><p style="font-size:.9rem;color:var(--m);margin-top:.35rem">Clear pricing, ratings and real-time tracking</p></div>
+<div class="wc"><div class="wc-c">✓</div><h3 style="font-weight:600;color:var(--p)">Flexible Services</h3><p style="font-size:.9rem;color:var(--m);margin-top:.35rem">Part-time, full-time or live-in</p></div>
+<div class="wc"><div class="wc-c">✓</div><h3 style="font-weight:600;color:var(--p)">Dedicated Support</h3><p style="font-size:.9rem;color:var(--m);margin-top:.35rem">Telugu & English support</p></div>
+</div>
+</section>
+<section class="cov">
+<h2>Serving Andhra Pradesh & Telangana</h2>
+<p>Hyderabad • Visakhapatnam • Vijayawada • Guntur • Tirupati • Warangal • Nellore • Kakinada • Rajahmundry</p>
+</section>
+<section class="cta">
+<h2>Ready for trusted care?</h2>
+<p>Book a verified professional in a few simple steps. Support in English & Telugu.</p>
+<div class="cta-b">
+<button class="btn btn-p btn-lg" onclick="show('book')">Book a Service</button>
+<button class="btn btn-o btn-lg" onclick="show('login')">Login</button>
+</div>
+</section>
+<footer>
+<div class="fi">
+<div><div class="brand" style="margin-bottom:.75rem"><span style="font-weight:600;color:#fff;font-size:1.1rem">Harika Care</span></div>
+<p style="font-size:.875rem;opacity:.65">Professional care and home services platform.</p></div>
+<div><h4>Services</h4><ul><li>Elderly Care</li><li>Patient Care</li><li>Nursing</li><li>Home Helpers</li></ul></div>
+<div><h4>Company</h4><ul><li>About Us</li><li>How it Works</li><li>For Workers</li><li>Contact</li></ul></div>
+<div><h4>Legal</h4><ul><li>Privacy Policy</li><li>Terms</li><li>FAQ</li></ul></div>
+</div>
+<div class="fc">© 2026 Harika Care & Services · People Care Everyday</div>
+</footer>
+</div>
+
+<div id="view-login" class="view">
+<header class="header">
+<a href="#" class="brand" onclick="show('home')"><div><div class="brand-name">Harika</div></div></a>
+<button class="btn" style="background:transparent" onclick="show('home')">← Home</button>
+</header>
+<div class="pw"><div class="panel">
+<div class="lt">
+<button class="lb active" id="ll-te" onclick="setLL('te')">తెలుగు</button>
+<button class="lb" id="ll-en" onclick="setLL('en')">English</button>
+</div>
+<h1 id="ltitle">హరికాకు స్వాగతం</h1>
+<p class="sub" id="lsub">మీ మొబైల్ నంబర్‌తో లాగిన్ అవ్వండి</p>
+<div id="lerr" class="err hidden"></div>
+<div id="lphone">
+<label id="lpl">మొబైల్ నంబర్</label>
+<div class="pr"><span class="px">+91</span><input id="lph" type="tel" maxlength="10" placeholder="9876543210" inputmode="numeric"/></div>
+<button class="btn btn-p fb" onclick="sendOtp()" id="lcont">కొనసాగించండి</button>
+</div>
+<div id="lotp" class="hidden">
+<label>OTP</label>
+<input id="lotpi" class="field" type="text" maxlength="6" placeholder="••••••" inputmode="numeric" style="text-align:center;letter-spacing:.35em;font-size:1.35rem"/>
+<p style="font-size:.8rem;color:var(--s);text-align:center;margin-bottom:1rem">Demo OTP: <strong>123456</strong></p>
+<button class="btn btn-p fb" onclick="verifyOtp()">Verify & Login</button>
+<button class="btn fb" style="margin-top:.5rem;background:transparent;color:var(--m)" onclick="backPhone()">Change number</button>
+</div>
+</div></div>
+</div>
+
+<div id="view-book" class="view">
+<header class="header">
+<a href="#" class="brand" onclick="show('home')"><div><div class="brand-name">Harika</div></div></a>
+<div class="sl" id="bsl">Step 1 / 6</div>
+<div class="lt" style="margin:0">
+<button class="lb active" id="bl-te" onclick="setBL('te')">తె</button>
+<button class="lb" id="bl-en" onclick="setBL('en')">EN</button>
+</div>
+</header>
+<div class="prog"><div class="prog-b" id="bp" style="width:16.6%"></div></div>
+<div class="pw" style="max-width:520px">
+<h1 style="font-size:1.4rem;font-weight:700;color:var(--p);margin-bottom:1.25rem" id="btitle">సేవను బుక్ చేయండి</h1>
+<div id="bsteps"></div>
+<div class="nr" id="bnav">
+<button class="btn btn-o" id="bback" onclick="bookBack()" style="display:none">వెనక్కి</button>
+<button class="btn btn-p" id="bnext" onclick="bookNext()">కొనసాగించండి</button>
+</div>
+</div>
+</div>
+
+<button class="cf" onclick="toggleChat()">💬</button>
+<div class="cp" id="cpanel">
+<div class="ch">
+<div><div style="font-weight:600">Harika Assistant</div><div style="font-size:.7rem;opacity:.75">EN / తెలుగు</div></div>
+<div style="display:flex;gap:4px">
+<button class="lb" style="font-size:.7rem;padding:2px 8px" id="cl-te" onclick="setCL('te')">తె</button>
+<button class="lb" style="font-size:.7rem;padding:2px 8px" id="cl-en" onclick="setCL('en')">EN</button>
+</div>
+</div>
+<div class="cm" id="cmsgs"></div>
+<div class="ci">
+<button class="mb" id="mic" onclick="startVoice()">🎤</button>
+<input id="cin" placeholder="Ask anything…" onkeydown="if(event.key==='Enter')sendChat()"/>
+<button class="sbn" onclick="sendChat()">↑</button>
+</div>
+</div>
+
+<script>
+const SVCS=[{id:'elderly',name:'Elderly Care',nameTe:'వృద్ధుల సంరక్షణ',icon:'🧓',rate:150},{id:'patient',name:'Patient Care',nameTe:'రోగి సంరక్షణ',icon:'🏥',rate:160},{id:'nursing',name:'Nursing Services',nameTe:'నర్సింగ్ సేవలు',icon:'💉',rate:250},{id:'baby',name:'Baby Care',nameTe:'శిశు సంరక్షణ',icon:'👶',rate:140},{id:'helper',name:'Home Helpers',nameTe:'ఇంటి సహాయకులు',icon:'🏠',rate:100},{id:'maid',name:'Maids',nameTe:'మెయిడ్స్',icon:'✨',rate:90},{id:'cook',name:'Cooking Staff',nameTe:'వంట సిబ్బంది',icon:'🍳',rate:120},{id:'hosp',name:'Hospitality',nameTe:'హాస్పిటాలిటీ',icon:'🏨',rate:130}];
+const CITIES=['Hyderabad','Secunderabad','Visakhapatnam','Vijayawada','Guntur','Tirupati','Warangal','Nellore','Kakinada','Rajahmundry'];
+document.getElementById('svc-grid').innerHTML=SVCS.map(s=>`<div class="sc" onclick="show('book');bf.serviceId='${s.id}';bf.serviceName='${s.name}';bf.rate=${s.rate};bs=1;rb()"><div class="sc-i">${s.icon}</div><div class="sc-n">${s.name}</div><div class="sc-t">${s.nameTe}</div></div>`).join('');
+function show(n){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById('view-'+n).classList.add('active');window.scrollTo(0,0);if(n==='book'){bs=1;rb()}}
+let ll='te';
+function setLL(l){ll=l;document.getElementById('ll-te').classList.toggle('active',l==='te');document.getElementById('ll-en').classList.toggle('active',l==='en');
+const t=l==='te'?{t:'హరికాకు స్వాగతం',s:'మీ మొబైల్ నంబర్‌తో లాగిన్ అవ్వండి',p:'మొబైల్ నంబర్',c:'కొనసాగించండి'}:{t:'Welcome to Harika',s:'Login with your mobile number',p:'Mobile Number',c:'Continue'};
+document.getElementById('ltitle').textContent=t.t;document.getElementById('lsub').textContent=t.s;document.getElementById('lpl').textContent=t.p;document.getElementById('lcont').textContent=t.c}
+function sendOtp(){const p=document.getElementById('lph').value.replace(/\D/g,'').slice(-10);const e=document.getElementById('lerr');if(p.length!==10){e.textContent='Enter valid 10-digit mobile';e.classList.remove('hidden');return}e.classList.add('hidden');document.getElementById('lphone').classList.add('hidden');document.getElementById('lotp').classList.remove('hidden')}
+function backPhone(){document.getElementById('lotp').classList.add('hidden');document.getElementById('lphone').classList.remove('hidden')}
+function verifyOtp(){const o=document.getElementById('lotpi').value.trim();const e=document.getElementById('lerr');if(o!=='123456'){e.textContent='Invalid OTP. Use 123456 for demo.';e.classList.remove('hidden');return}e.classList.add('hidden');localStorage.setItem('harika_user',JSON.stringify({phone:document.getElementById('lph').value,role:'CLIENT'}));show('book')}
+let bl='te',bs=1;const bf={serviceId:'',serviceName:'',rate:0,city:'Hyderabad',address:'',pincode:'',date:'',time:'09:00',duration:4,gender:'NO_PREF',requirements:''};
+function setBL(l){bl=l;document.getElementById('bl-te').classList.toggle('active',l==='te');document.getElementById('bl-en').classList.toggle('active',l==='en');rb()}
+function rb(){const te=bl==='te';document.getElementById('btitle').textContent=te?'సేవను బుక్ చేయండి':'Book a Service';document.getElementById('bsl').textContent=`Step ${Math.min(bs,6)} / 6`;document.getElementById('bp').style.width=(Math.min(bs,6)/6*100)+'%';
+document.getElementById('bback').style.display=bs>1&&bs<7?'block':'none';document.getElementById('bback').textContent=te?'వెనక్కి':'Back';
+const nb=document.getElementById('bnext');nb.style.display=bs<7?'block':'none';nb.textContent=bs===6?(te?'బుకింగ్ నిర్ధారించండి':'Confirm Booking'):(te?'కొనసాగించండి':'Continue');nb.className='btn '+(bs===6?'btn-s':'btn-p');document.getElementById('bnav').style.display=bs<7?'flex':'none';
+let h='';
+if(bs===1)h=SVCS.map(s=>`<button class="so ${bf.serviceId===s.id?'sel':''}" onclick="bf.serviceId='${s.id}';bf.serviceName='${s.name}';bf.rate=${s.rate};rb()"><div style="font-weight:600;color:var(--p)">${s.name}</div><div style="font-size:.75rem;color:var(--m)">${s.nameTe}</div><div class="rate">₹${s.rate}/hr</div></button>`).join('');
+else if(bs===2)h=`<label>${te?'నగరం':'City'}</label><select class="field" onchange="bf.city=this.value">${CITIES.map(c=>`<option ${bf.city===c?'selected':''}>${c}</option>`).join('')}</select><label>${te?'పూర్తి చిరునామా':'Full Address'}</label><textarea class="field" rows="3" placeholder="Flat / Street / Landmark" oninput="bf.address=this.value">${bf.address}</textarea><label>${te?'పిన్‌కోడ్':'Pincode'}</label><input class="field" value="${bf.pincode}" maxlength="6" inputmode="numeric" oninput="bf.pincode=this.value.replace(/\\D/g,'').slice(0,6)"/>`;
+else if(bs===3)h=`<label>${te?'తేదీ':'Date'}</label><input class="field" type="date" value="${bf.date}" min="${new Date().toISOString().slice(0,10)}" onchange="bf.date=this.value"/><label>${te?'ప్రారంభ సమయం':'Start Time'}</label><input class="field" type="time" value="${bf.time}" onchange="bf.time=this.value"/>`;
+else if(bs===4)h=`<label>${te?'వ్యవధి (గంటలు)':'Duration (hours)'}</label><div class="cr">${[2,4,6,8,12,24].map(h=>`<button class="chip ${bf.duration===h?'sel':''}" onclick="bf.duration=${h};rb()">${h}h</button>`).join('')}</div><label>${te?'ఇష్టపడే లింగం':'Preferred Gender'}</label><div class="cr"><button class="chip ${bf.gender==='MALE'?'sel':''}" onclick="bf.gender='MALE';rb()">${te?'పురుషుడు':'Male'}</button><button class="chip ${bf.gender==='FEMALE'?'sel':''}" onclick="bf.gender='FEMALE';rb()">${te?'మహిళ':'Female'}</button><button class="chip ${bf.gender==='NO_PREF'?'sel':''}" onclick="bf.gender='NO_PREF';rb()">${te?'ఇష్టం లేదు':'No Preference'}</button></div>`;
+else if(bs===5)h=`<label>${te?'ప్రత్యేక అవసరాలు':'Special Requirements'}</label><textarea class="field" rows="4" placeholder="${te?'వైద్య అవసరాలు, భాష…':'Medical needs, language…'}" oninput="bf.requirements=this.value">${bf.requirements}</textarea>`;
+else if(bs===6){const tot=bf.rate*bf.duration;h=`<div style="background:#fff;border:1px solid var(--b);border-radius:1rem;padding:1.25rem"><div class="rr"><span>Service</span><span>${bf.serviceName}</span></div><div class="rr"><span>City</span><span>${bf.city}</span></div><div class="rr"><span>Address</span><span>${bf.address||'—'}</span></div><div class="rr"><span>Date</span><span>${bf.date} ${bf.time}</span></div><div class="rr"><span>Duration</span><span>${bf.duration}h</span></div><div class="rr"><span>Gender</span><span>${bf.gender}</span></div><div class="rr" style="border-top:1px solid var(--b);margin-top:.5rem;padding-top:.75rem;font-weight:700"><span>Estimated</span><span style="color:var(--p);font-size:1.1rem">₹${tot}</span></div></div>`}
+else if(bs===7){const id='HK'+Date.now().toString().slice(-8);h=`<div class="sb"><div class="si">✓</div><h2 style="margin-top:1.25rem;font-size:1.5rem;color:var(--p)">${te?'బుకింగ్ అభ్యర్థించబడింది!':'Booking Requested!'}</h2><p style="margin-top:.75rem;color:var(--m)">${te?'మేము ధృవీకరించబడిన నిపుణుడిని సరిపోల్చుతున్నాము.':'We are matching a verified professional.'}</p><p style="margin-top:1rem;font-family:monospace;color:var(--s)">#${id}</p><button class="btn btn-p fb" style="margin-top:1.5rem" onclick="show('home')">${te?'హోమ్‌కు వెళ్లండి':'Back to Home'}</button></div>`}
+document.getElementById('bsteps').innerHTML=h}
+function bookNext(){if(bs===1&&!bf.serviceId)return;if(bs===2&&bf.address.length<5)return;if(bs===3&&!bf.date)return;if(bs<6){bs++;rb()}else if(bs===6){bs=7;rb()}}
+function bookBack(){if(bs>1){bs--;rb()}}
+let cl='te',co=false;
+const KB=[{q:['hello','hi','namaste','నమస్కారం','help'],a:'Namaste! I am Harika Assistant. Ask about services, booking, pricing, cities or verification.',aTe:'నమస్కారం! నేను హరికా అసిస్టెంట్. సేవలు, బుకింగ్, ధరలు, నగరాలు లేదా ధృవీకరణ గురించి అడగండి.'},{q:['service','services','సేవ'],a:'We offer Elderly Care, Patient Care, Nursing, Baby Care, Home Helpers, Maids, Cooking & Hospitality. All workers verified.',aTe:'వృద్ధుల సంరక్షణ, రోగి సంరక్షణ, నర్సింగ్, శిశు సంరక్షణ, హోమ్ హెల్పర్లు, మెయిడ్స్, వంట.'},{q:['book','booking','బుక్'],a:'Tap Find a Service: choose service → location → date/time → gender → confirm.',aTe:'Find a Service నొక్కండి: సేవ → స్థలం → తేదీ → లింగం → నిర్ధారణ.'},{q:['price','rate','cost','ధర'],a:'Approx ₹90–₹250/hour depending on service.',aTe:'సుమారు ₹90–₹250 గంటకు.'},{q:['city','hyderabad','vijayawada','నగరం'],a:'Hyderabad, Vizag, Vijayawada, Guntur, Tirupati, Warangal, Nellore, Kakinada, Rajahmundry.',aTe:'హైదరాబాద్, విశాఖపట్నం, విజయవాడ, గుంటూరు, తిరుపతి, వరంగల్.'}];
+function toggleChat(){co=!co;document.getElementById('cpanel').classList.toggle('open',co);if(co&&!document.getElementById('cmsgs').children.length)addMsg('bot',cl==='te'?'నమస్కారం! నేను హరికా అసిస్టెంట్.':'Namaste! I am Harika Assistant.')}
+function setCL(l){cl=l;document.getElementById('cl-te').classList.toggle('active',l==='te');document.getElementById('cl-en').classList.toggle('active',l==='en')}
+function addMsg(r,t){const d=document.createElement('div');d.className='msg '+r;d.textContent=t;document.getElementById('cmsgs').appendChild(d);document.getElementById('cmsgs').scrollTop=9999}
+function reply(q){const lo=q.toLowerCase();for(const i of KB){if(i.q.some(k=>lo.includes(k)))return cl==='te'?i.aTe:i.a}return cl==='te'?'క్షమించండి, అర్థం కాలేదు.':'Sorry, ask about services, booking, pricing or cities.'}
+function sendChat(t){const q=(t||document.getElementById('cin').value).trim();if(!q)return;document.getElementById('cin').value='';addMsg('user',q);setTimeout(()=>addMsg('bot',reply(q)),350)}
+function startVoice(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){addMsg('bot','Voice not supported. Please type.');return}const r=new SR();r.lang=cl==='te'?'te-IN':'en-IN';const b=document.getElementById('mic');r.onstart=()=>b.classList.add('listening');r.onend=()=>b.classList.remove('listening');r.onresult=e=>sendChat(e.results[0][0].transcript);r.start()}
+</script>
+</body>
+</html>
